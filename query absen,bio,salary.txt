@@ -1,0 +1,10 @@
+SELECT  absensi.id, `nama`, `id_salary`, salary, datediff(end_date,start_date) AS Absen,
+CASE
+	WHEN datediff(end_date,start_date)>=2 THEN salary*0.2
+	WHEN datediff(end_date,start_date)= 1 THEN salary*0.1
+    WHEN datediff(end_date,start_date)= 0 THEN salary = 0
+    END AS Bonus
+FROM `biodata`
+LEFT JOIN salary ON biodata.id_salary = salary.id
+RIGHT JOIN absensi ON absensi.nik = biodata.nik
+LIMIT 3
