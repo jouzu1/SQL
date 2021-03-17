@@ -1,4 +1,4 @@
-# SQL
+# Structure Query Language
 ---
 Tenang aja bro, repo ini isinya cuman latihan gw untuk query aja, semoga gw bisa menjadi developer yang berguna untuk komunitas, aamiin
 
